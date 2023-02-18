@@ -10,6 +10,10 @@ public class CoreJavaVideoPage {
 	@FindBy (xpath = "//h1[text()='Core Java For Selenium Training']")
 	private WebElement pageHeader;
 	
+	@FindBy (xpath = "//a[text()='X']")
+	private WebElement closecookies;
+	
+	
 	@FindBy (xpath = "//button[@aria-label='Play']")
 	private WebElement playButton;
 
@@ -32,6 +36,11 @@ public class CoreJavaVideoPage {
 		
 	}
 	
+	public void clickCloseCookies()
+	{
+		closecookies.click();
+	}
+	
 	public void clickPlayButton()
 	{
 		playButton.click();
@@ -40,6 +49,11 @@ public class CoreJavaVideoPage {
 	public void clickPauseButton()
 	{
 		pauseButton.click();
+	}
+	
+	public void clickWishlist()
+	{
+		addToWishlistTab.click();
 	}
 	
 	
