@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-19T18:18:54 IST" name="Default suite" finished-at="2023-02-19T18:19:14 IST" duration-ms="20361">
+  <suite started-at="2023-02-21T09:18:35 IST" name="Default suite" finished-at="2023-02-21T09:19:42 IST" duration-ms="66947">
     <groups>
     </groups>
-    <test started-at="2023-02-19T18:18:54 IST" name="Default test" finished-at="2023-02-19T18:19:14 IST" duration-ms="20361">
-      <class name="testScripts.FourthTest">
-        <test-method is-config="true" signature="classConfiguration()[pri:0, instance:testScripts.FourthTest@1e1a0406]" started-at="2023-02-19T18:18:54 IST" name="classConfiguration" finished-at="2023-02-19T18:19:00 IST" duration-ms="6517" status="PASS">
+    <test started-at="2023-02-21T09:18:35 IST" name="Default test" finished-at="2023-02-21T09:19:42 IST" duration-ms="66947">
+      <class name="testScripts.ThirdTest">
+        <test-method is-config="true" signature="classConfiguration()[pri:0, instance:testScripts.ThirdTest@1e1a0406]" started-at="2023-02-21T09:18:35 IST" name="classConfiguration" finished-at="2023-02-21T09:18:58 IST" duration-ms="22760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classConfiguration -->
-        <test-method is-config="true" signature="methodConfiguration()[pri:0, instance:testScripts.FourthTest@1e1a0406]" started-at="2023-02-19T18:19:00 IST" name="methodConfiguration" finished-at="2023-02-19T18:19:03 IST" duration-ms="2699" status="PASS">
+        <test-method is-config="true" signature="methodConfiguration()[pri:0, instance:testScripts.ThirdTest@1e1a0406]" started-at="2023-02-21T09:18:58 IST" name="methodConfiguration" finished-at="2023-02-21T09:19:03 IST" duration-ms="5069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodConfiguration -->
-        <test-method signature="fourthTest()[pri:0, instance:testScripts.FourthTest@1e1a0406]" started-at="2023-02-19T18:19:03 IST" name="fourthTest" finished-at="2023-02-19T18:19:14 IST" duration-ms="10687" status="PASS">
+        <test-method signature="thirdTest()[pri:0, instance:testScripts.ThirdTest@1e1a0406]" started-at="2023-02-21T09:19:03 IST" name="thirdTest" finished-at="2023-02-21T09:19:42 IST" duration-ms="38593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fourthTest -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testScripts.FourthTest@1e1a0406]" started-at="2023-02-19T18:19:14 IST" name="methodTearDown" finished-at="2023-02-19T18:19:14 IST" duration-ms="402" status="PASS">
+        </test-method> <!-- thirdTest -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testScripts.ThirdTest@1e1a0406]" started-at="2023-02-21T09:19:42 IST" name="methodTearDown" finished-at="2023-02-21T09:19:42 IST" duration-ms="442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
-        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testScripts.FourthTest@1e1a0406]" started-at="2023-02-19T18:19:14 IST" name="classTearDown" finished-at="2023-02-19T18:19:14 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testScripts.ThirdTest@1e1a0406]" started-at="2023-02-21T09:19:42 IST" name="classTearDown" finished-at="2023-02-21T09:19:42 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classTearDown -->
-      </class> <!-- testScripts.FourthTest -->
+      </class> <!-- testScripts.ThirdTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
