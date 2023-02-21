@@ -21,7 +21,7 @@ public class ThirdTest extends BaseClass {
 		soft.assertEquals(videopage.getPageHeader(), "Core Java For Selenium Training");
 		
 		videopage.clickCloseCookies();
-		Thread.sleep(2000);
+		
 		web.switchToFrame();
 		videopage.clickPlayButton();
 		Thread.sleep(2000);
