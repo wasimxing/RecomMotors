@@ -38,6 +38,7 @@ public class FirstTest extends BaseClass {
 		
 		soft.assertAll();
 		//selenium.getItemAddedMessage();
+		
 	}
 	
 

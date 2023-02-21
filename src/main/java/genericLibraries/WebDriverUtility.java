@@ -38,7 +38,7 @@ public class WebDriverUtility {
 	 * @return
 	 */
 	
-	public WebDriver openAppliciation(String browser, String url, long time)
+	public WebDriver openApplication(String browser, String url, long time)
 	{
 		switch(browser)
 		{

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericLibraries.WebDriverUtility;
+
 public class ContactUsPage {
 //Declaration
 	@FindBy (xpath = "//img[contains(@src,'contactus')]")
@@ -22,7 +24,7 @@ public class ContactUsPage {
 	@FindBy (name = "message")
 	private WebElement messageTextArea;
 	
-	@FindBy (name="//button[text()='Send us mail']")
+	@FindBy (xpath ="//button[text()='Send us mail']")
 	private WebElement sendUsMailButton;
 	
 	//Initialization

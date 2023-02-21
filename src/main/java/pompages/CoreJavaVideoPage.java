@@ -17,7 +17,7 @@ public class CoreJavaVideoPage {
 	@FindBy (xpath = "//button[@aria-label='Play']")
 	private WebElement playButton;
 
-	@FindBy (xpath = "//button[@aria-label='Play']")
+	@FindBy (xpath = "//button[@aria-label='Pause']")
 	private WebElement pauseButton;
 	
 	@FindBy (xpath = "//span[text()='Add To Wishlist']")

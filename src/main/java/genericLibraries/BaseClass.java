@@ -41,14 +41,14 @@ public class BaseClass {
 		property.propertyFileInitialization(IConstantPath.PROPERTIES_FILE_PATH);
 		excel.excelInitialization(IConstantPath.EXCEL_FILE_PATH);
 		long time = Long.parseLong(property.fetchProperty("timeout"));
-		web.openAppliciation(property.fetchProperty("browser"), property.fetchProperty("url"), time);
+		web.openApplication(property.fetchProperty("browser"), property.fetchProperty("url"), time);
 	}
 	@BeforeMethod
 	public void methodConfiguration()
 	{
 		
 		time = Long.parseLong(property.fetchProperty("timeout"));
-		driver = web.openAppliciation(property.fetchProperty("browser"), property.fetchProperty("url"), time);
+		driver = web.openApplication(property.fetchProperty("browser"), property.fetchProperty("url"), time);
 		
 		home = new SkillraryHomepage(driver);
 		
