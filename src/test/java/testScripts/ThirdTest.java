@@ -17,6 +17,7 @@ public class ThirdTest extends BaseClass {
 		soft.assertEquals(corejava.getPageHeader(), "CORE JAVA FOR SELENIUM");
 		
 		corejava.clickCoreJavaForSeleniumLink();
+		Thread.sleep(time);
 		soft.assertEquals(videopage.getPageHeader(), "Core Java For Selenium Training");
 		
 		videopage.clickCloseCookies();
