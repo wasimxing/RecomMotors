@@ -13,74 +13,73 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 /**
  * this class contains reusable methods to perform operations on Excel workbook
+ * 
  * @author wasim
  *
  */
 
 public class ExcelUtility {
 	private Workbook wb;
-	
+
 	/**
 	 * this method is used to initialize excel workbook
+	 * 
 	 * @param excelPath
 	 */
 	public void excelInitialization(String excelPath) {
 		FileInputStream fis = null;
 		try {
-			 fis = new FileInputStream(excelPath);
+			fis = new FileInputStream(excelPath);
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 		try {
 			wb = WorkbookFactory.create(fis);
 		} catch (EncryptedDocumentException | IOException e) {
-			
+
 			e.printStackTrace();
 		}
-		
-		
-		
+
 	}
+
 	/**
 	 * This method is used to fetch single data from excel
+	 * 
 	 * @param sheetName
 	 * @param rowNum
 	 * @param cellNum
 	 * @return
 	 */
-	public String fetchDataFromExcel(String sheetName, int rowNum, int cellNum)
-	{
+	public String fetchDataFromExcel(String sheetName, int rowNum, int cellNum) {
 		return wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum).getStringCellValue();
 	}
-	
+
 	/**
 	 * this method is used fetch multiple data from excel
+	 * 
 	 * @param sheetName
 	 * @return
 	 */
-	public List<String> fetchDataFromExcel(String sheetName)
-	{
+	public List<String> fetchDataFromExcel(String sheetName) {
 		List<String> dataList = new ArrayList<>();
 		Sheet sheet = wb.getSheet(sheetName);
-		for(int i=0; i<=sheet.getLastRowNum(); i++)
-		{
+		for (int i = 0; i <= sheet.getLastRowNum(); i++) {
 			String data = sheet.getRow(i).getCell(1).getStringCellValue();
 			dataList.add(data);
 		}
 		return dataList;
 	}
-	
+
 	/**
 	 * this method is used to close the workbook
 	 */
-	public void closeExcel()
-	{
+	public void closeExcel() {
 		try {
 			wb.close();
 		} catch (IOException e) {
-			 
+
 			e.printStackTrace();
 		}
 	}

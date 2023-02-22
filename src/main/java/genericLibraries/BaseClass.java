@@ -16,7 +16,7 @@ import pompages.SkillraryHomepage;
 import pompages.TestingPage;
 
 public class BaseClass {
-	
+
 	protected PropertyFileUtility property;
 	protected ExcelUtility excel;
 	protected WebDriverUtility web;
@@ -29,53 +29,50 @@ public class BaseClass {
 	protected ContactUsPage contactpage;
 	protected WebDriver driver;
 	protected long time;
-	//@BeforeSuite
-	//@BeforeTest
+
+	// @BeforeSuite
+	// @BeforeTest
 	@BeforeClass
-	public void classConfiguration()
-	{
+	public void classConfiguration() {
 		property = new PropertyFileUtility();
 		excel = new ExcelUtility();
 		web = new WebDriverUtility();
-		
+
 		property.propertyFileInitialization(IConstantPath.PROPERTIES_FILE_PATH);
 		excel.excelInitialization(IConstantPath.EXCEL_FILE_PATH);
 		long time = Long.parseLong(property.fetchProperty("timeout"));
 		web.openApplication(property.fetchProperty("browser"), property.fetchProperty("url"), time);
 	}
+
 	@BeforeMethod
-	public void methodConfiguration()
-	{
-		
+	public void methodConfiguration() {
+
 		time = Long.parseLong(property.fetchProperty("timeout"));
 		driver = web.openApplication(property.fetchProperty("browser"), property.fetchProperty("url"), time);
-		
+
 		home = new SkillraryHomepage(driver);
-		
+
 		Assert.assertTrue(home.getLogo().isDisplayed());
-		
+
 		demoApp = new SkillraryDemoApp(driver);
 		selenium = new SeleniumTrainingPage(driver);
 		videopage = new CoreJavaVideoPage(driver);
 		testingpage = new TestingPage(driver);
 		contactpage = new ContactUsPage(driver);
 		corejava = new CoreJavaForSelenium(driver);
-		
+
 	}
-	
-	
+
 	@AfterMethod
-	public void methodTearDown()
-	{
+	public void methodTearDown() {
 		web.quitBrowser();
 	}
-	
+
 	@AfterClass
-	public void classTearDown()
-	{
+	public void classTearDown() {
 		excel.closeExcel();
 	}
-	//@AfterTest
-	//@AfterSuite
+	// @AfterTest
+	// @AfterSuite
 
 }
